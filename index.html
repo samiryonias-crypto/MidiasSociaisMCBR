@@ -287,11 +287,9 @@ const DATA = {
     resolucao: [
       { lbl:'Sim',                                    n:7,  cls:'s-green'  },
       { lbl:'Parcial / Aguardando resposta',          n:6,  cls:'s-amber'  },
-      { lbl:'Não — cliente abandonou chamada',        n:7,  cls:'s-blue',  note:'inclui abandono antes e durante o atendimento' },
-      { lbl:'Não — deflectado',                       n:5,  cls:'s-purple' },
+      { lbl:'Não — abandonou durante atendimento',    n:3,  cls:'s-blue',  note:'apenas abandono durante o atendimento' },
       { lbl:'Não — falta de gestão',                  n:2,  cls:'s-red'    },
       { lbl:'Não — demora na gestão',                 n:2,  cls:'s-red'    },
-      { lbl:'Não — erro Sofia',                       n:2,  cls:'s-red'    },
       { lbl:'Não — reserva em gestão do provedor',    n:1,  cls:'s-amber'  },
       { lbl:'Não — falta de resposta Provedor',       n:1,  cls:'s-amber'  },
       { lbl:'Não — pendente de ação do cliente',      n:1,  cls:'s-amber'  },
@@ -353,11 +351,9 @@ const DATA = {
     resolucao: [
       { lbl:'Sim',                                    n:3,  cls:'s-green'  },
       { lbl:'Parcial / Aguardando resposta',          n:5,  cls:'s-amber'  },
-      { lbl:'Não — cliente abandonou chamada',        n:7,  cls:'s-blue',  note:'inclui abandono antes e durante o atendimento' },
-      { lbl:'Não — deflectado',                       n:2,  cls:'s-purple' },
+      { lbl:'Não — abandonou durante atendimento',    n:3,  cls:'s-blue',  note:'apenas abandono durante o atendimento' },
       { lbl:'Não — falta de gestão',                  n:1,  cls:'s-red'    },
       { lbl:'Não — demora na gestão',                 n:1,  cls:'s-red'    },
-      { lbl:'Não — erro Sofia',                       n:1,  cls:'s-red'    },
       { lbl:'Não — reserva em gestão do provedor',    n:1,  cls:'s-amber'  },
       { lbl:'Não — falta de resposta Provedor',       n:1,  cls:'s-amber'  },
     ],
@@ -414,10 +410,8 @@ const DATA = {
     resolucao: [
       { lbl:'Sim',                                 n:4, cls:'s-green'  },
       { lbl:'Parcial / Aguardando resposta',        n:1, cls:'s-amber'  },
-      { lbl:'Não — deflectado',                    n:3, cls:'s-purple' },
       { lbl:'Não — falta de gestão',               n:1, cls:'s-red'    },
       { lbl:'Não — demora na gestão',              n:1, cls:'s-red'    },
-      { lbl:'Não — erro Sofia',                    n:1, cls:'s-red'    },
       { lbl:'Não — pendente de ação do cliente',   n:1, cls:'s-amber'  },
     ],
     insights: [
@@ -646,10 +640,6 @@ function render() {
             <div class="status-row s-red">
               <div class="status-left"><span class="status-lbl">Não atendidos</span><span class="status-note">motivo variado</span></div>
               <span class="status-n">${d.atendidoNao}</span>
-            </div>
-            <div class="status-row s-blue">
-              <div class="status-left"><span class="status-lbl">Contato sem reserva</span><span class="status-note">não rastreável</span></div>
-              <span class="status-n">${d.naoResponderam}</span>
             </div>
           </div>
         </div>
